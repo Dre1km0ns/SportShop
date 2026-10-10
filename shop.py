@@ -17,3 +17,7 @@ def low_stock_report(products, limit=3):
     lines = [f'Товары с остатком <= {limit} шт.:']
     lines += [f"  [{p['id']}] {p['name']} — {total_quantity(p)} шт." for p in low]
     return '\n'.join(lines)
+
+
+def total_sum(products):
+    return sum(p['price'] for p in products)
