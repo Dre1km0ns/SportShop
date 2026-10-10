@@ -50,7 +50,8 @@ def update_quantity(cart, products, product_id, size, new_qty):
 
 def cart_total(cart):
     """Сумма корзины."""
-    return round(sum(i['price'] * i['quantity'] for i in cart), 2)
+    # hotfix: цена и количество могут прийти строками (из JSON/ввода) — приводим к числам
+    return round(sum(float(i['price']) * int(i['quantity']) for i in cart), 2)
 
 
 def total_sum(cart):

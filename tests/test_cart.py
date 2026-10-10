@@ -33,3 +33,8 @@ class TestCart(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TestCartTotalHotfix(unittest.TestCase):
+    def test_string_values(self):
+        self.assertEqual(cart_total([{'price': '1990.0', 'quantity': '2'}]), 3980.0)
