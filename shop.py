@@ -20,4 +20,4 @@ def low_stock_report(products, limit=3):
 
 
 def total_sum(products):
-    return sum(p['price'] for p in products)
+    return sum(p['price'] * p['quantity'] for p in products)
