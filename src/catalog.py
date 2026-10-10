@@ -16,6 +16,8 @@ def get_low_stock(products, limit=LOW_STOCK_LIMIT):
 
 def search_advanced(products, query, category=None, min_price=None, max_price=None):
     """Комбинированный поиск: подстрока в названии/бренде + категория + диапазон цены."""
+    if min_price is not None and max_price is not None and min_price > max_price:
+        raise ValueError('min_price не может быть больше max_price')
     query = (query or '').strip().lower()
     result = []
     for p in products:
