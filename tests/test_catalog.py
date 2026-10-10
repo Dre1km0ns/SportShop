@@ -26,6 +26,10 @@ class TestCatalog(unittest.TestCase):
         self.assertEqual(find_product(P, 2)['name'], 'Мяч')
         self.assertIsNone(find_product(P, 3))
 
+    def test_search_advanced_bad_range(self):
+        with self.assertRaises(ValueError):
+            search_advanced(P, '', min_price=100, max_price=10)
+
 
 if __name__ == '__main__':
     unittest.main()
