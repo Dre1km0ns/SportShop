@@ -1,0 +1,8 @@
+digraph G { rankdir=LR; graph[fontname="DejaVu Sans",label="Диаграмма потоков данных первого уровня (DFD-1)",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=12]; edge[fontname="DejaVu Sans",fontsize=10];
+ buyer[shape=box,label="Покупатель"]; mgr[shape=box,label="Менеджер"];
+ p1[shape=Mrecord,style=filled,fillcolor="#e8f4e8",label="{1|Поиск в каталоге}"]; p2[shape=Mrecord,style=filled,fillcolor="#e8f4e8",label="{2|Формирование корзины}"];
+ p3[shape=Mrecord,style=filled,fillcolor="#e8f4e8",label="{3|Оформление заказа}"]; p4[shape=Mrecord,style=filled,fillcolor="#e8f4e8",label="{4|Аналитика}"];
+ d1[shape=record,label="D1 | products.json"]; d2[shape=record,label="D2 | orders.json"];
+ buyer->p1[label="запрос"]; d1->p1[label="товары"]; p1->buyer[label="результаты"]; buyer->p2[label="id, размер, кол-во"]; d1->p2[label="остатки"];
+ p2->p3[label="позиции корзины"]; buyer->p3[label="имя клиента"]; p3->d1[label="списание остатков"]; p3->d2[label="заказ"]; p3->buyer[label="чек"];
+ d2->p4[label="заказы"]; d1->p4[label="каталог"]; p4->mgr[label="отчёт"]; }

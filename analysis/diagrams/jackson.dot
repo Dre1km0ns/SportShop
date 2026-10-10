@@ -1,0 +1,5 @@
+digraph G { graph[fontname="DejaVu Sans",label="Структурная карта Джексона (сеанс работы)",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=11,shape=box]; edge[arrowhead=none];
+ s[label="Сеанс работы"]; l[label="Загрузка данных"]; p[label="Обработка команд"]; x[label="Выход"];
+ c[label="Команда *"]; k1[label="Каталог °"]; k2[label="Поиск °"]; k3[label="Корзина °"]; k4[label="Заказ °"]; k5[label="Аналитика °"];
+ o1[label="Проверка корзины"]; o2[label="Списание остатков"]; o3[label="Сохранение JSON"];
+ s->{l p x}; p->c; c->{k1 k2 k3 k4 k5}; k4->{o1 o2 o3}; }

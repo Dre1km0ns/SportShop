@@ -1,0 +1,3 @@
+digraph G { rankdir=LR; graph[fontname="DejaVu Sans",label="Схема документопотока магазина",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=11,shape=note,style=filled,fillcolor="#fff6d5"]; edge[fontname="DejaVu Sans",fontsize=10];
+ a[label="Накладная\nпоставщика"]; b[label="Карточка товара\n(каталог)"]; c[label="Корзина\nпокупателя"]; d[label="Заказ / чек"]; e[label="Журнал заказов"]; f[label="Отчёт по продажам"]; g[label="Налоговая\nотчётность"];
+ a->b[label="приёмка"]; b->c[label="выбор"]; c->d[label="оформление"]; d->e; e->f[label="аналитика"]; f->g; d->b[label="списание\nостатков",style=dashed]; }

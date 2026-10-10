@@ -1,0 +1,8 @@
+digraph G { rankdir=TB; graph[fontname="DejaVu Sans",label="Функциональная схема",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=11,shape=box];
+ root[label="ИС «СпортТовары»",style=filled,fillcolor="#dbe9ff"];
+ a[label="Управление каталогом"]; b[label="Продажи"]; c[label="Аналитика"]; d[label="Хранение данных"];
+ a1[label="Просмотр"]; a2[label="Поиск по названию,\nбренду, категории, цене"]; a3[label="Низкий остаток (≤3)"]; a4[label="Средняя цена,\nкатегории"];
+ b1[label="Добавление в корзину"]; b2[label="Изменение/удаление"]; b3[label="Оформление заказа"]; b4[label="Печать чека"];
+ c1[label="Выручка"]; c2[label="Средний чек"]; c3[label="Лидер продаж"];
+ d1[label="Загрузка/сохранение\nкаталога"]; d2[label="Загрузка/сохранение\nзаказов"];
+ root->{a b c d}; a->{a1 a2 a3 a4}; b->{b1 b2 b3 b4}; c->{c1 c2 c3}; d->{d1 d2}; }

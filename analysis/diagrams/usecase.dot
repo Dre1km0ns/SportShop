@@ -1,0 +1,5 @@
+digraph G { rankdir=LR; graph[fontname="DejaVu Sans",label="Диаграмма вариантов использования",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=12]; edge[arrowhead=none];
+ buyer[shape=none,label="👤\nПокупатель"]; mgr[shape=none,label="👤\nМенеджер"]; owner[shape=none,label="👤\nВладелец"];
+ subgraph cluster_s { label="ИС «СпортТовары»"; style=rounded; node[shape=ellipse,style=filled,fillcolor="#fff6d5"];
+ u1[label="Просмотр каталога"]; u2[label="Поиск товара"]; u3[label="Добавление в корзину"]; u4[label="Изменение корзины"]; u5[label="Оформление заказа"]; u6[label="Контроль низких остатков"]; u7[label="Аналитика продаж"]; u8[label="Сохранение/загрузка заказов"]; }
+ buyer->u1; buyer->u2; buyer->u3; buyer->u4; buyer->u5; mgr->u1; mgr->u2; mgr->u5; mgr->u6; mgr->u8; owner->u7; u5->u8[style=dashed,arrowhead=open,label="«include»",fontname="DejaVu Sans",fontsize=10]; }

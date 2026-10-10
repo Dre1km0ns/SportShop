@@ -1,0 +1,7 @@
+digraph G { graph[fontname="DejaVu Sans",label="Блок-схема алгоритма оформления заказа",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=11]; edge[fontname="DejaVu Sans",fontsize=10];
+ s[shape=ellipse,label="Начало"]; i[shape=parallelogram,label="Ввод: cart, client_name, products"];
+ c1[shape=diamond,label="Корзина пуста\nили имя пустое?"]; r0[shape=box,label="return None"];
+ l[shape=hexagon,label="Для каждой позиции"]; c2[shape=diamond,label="Остаток <\nколичества?"];
+ w[shape=box,label="Списать остатки"]; o[shape=box,label="Сформировать заказ:\nid, клиент, дата,\nпозиции, сумма"]; cl[shape=box,label="Очистить корзину"];
+ r[shape=parallelogram,label="Вывод: order"]; e[shape=ellipse,label="Конец"];
+ s->i->c1; c1->r0[label="да"]; c1->l[label="нет"]; l->c2; c2->r0[label="да"]; c2->w[label="нет (все)"]; w->o->cl->r->e; r0->e; }

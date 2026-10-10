@@ -1,0 +1,11 @@
+digraph G { graph[fontname="DejaVu Sans",label="Диаграмма классов ИС «СпортТовары»",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans Mono",fontsize=10,shape=record,style=filled,fillcolor="#f3f7ff"]; edge[fontname="DejaVu Sans",fontsize=10];
+ Product[label="{Product|+id: int\l+name: str\l+brand: str\l+category: str\l+price: float\l-_sizes: dict\l|+total_quantity(): int\l+is_low_stock(): bool\l+has_size(size): bool\l+stock(size): int\l}"];
+ Footwear[label="{Footwear|+gender: str\l|+describe(): str\l}"]; Apparel[label="{Apparel|+material: str\l|+describe(): str\l}"];
+ Catalog[label="{Catalog|-_products: list\l|+add(p)\l+find(id)\l+search(query, ...)\l+low_stock()\l+count_by_category()\l}"];
+ CartItem[label="{CartItem|+product: Product\l+size\l+quantity: int\l|+subtotal(): float\l}"];
+ Cart[label="{Cart|-_items: list\l|+add(p, size, qty)\l+remove(id, size)\l+total(): float\l}"];
+ Order[label="{Order|+id: str\l+client: str\l+date: str\l+items: list\l+total: float\l|+to_dict()\l+receipt(): str\l}"];
+ Shop[label="{Shop|+catalog: Catalog\l+orders: list\l|+checkout(cart, client)\l+revenue()\l+best_seller()\l}"];
+ Footwear->Product[arrowhead=empty]; Apparel->Product[arrowhead=empty];
+ Catalog->Product[arrowhead=odiamond,dir=back,label="1..*"]; Cart->CartItem[dir=back,arrowtail=diamond,label="0..*"]; CartItem->Product[label="ссылается"];
+ Shop->Catalog[dir=back,arrowtail=odiamond]; Shop->Order[dir=back,arrowtail=odiamond,label="0..*"]; Order->CartItem[label="копии"]; }

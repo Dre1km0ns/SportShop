@@ -1,0 +1,6 @@
+digraph G { rankdir=LR; graph[fontname="DejaVu Sans",label="Контекстная диаграмма потоков данных (DFD-0)",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=13]; edge[fontname="DejaVu Sans",fontsize=11];
+ sys[shape=circle,style=filled,fillcolor="#dbe9ff",label="0\nИС «СпортТовары»",width=2.2];
+ buyer[shape=box,label="Покупатель"]; mgr[shape=box,label="Менеджер магазина"]; owner[shape=box,label="Владелец"]; sup[shape=box,label="Поставщик"]; tax[shape=box,label="Налоговые органы"];
+ buyer->sys[label="выбор товара,\nразмер, количество"]; sys->buyer[label="чек заказа"];
+ mgr->sys[label="запросы поиска,\nизменения каталога"]; sys->mgr[label="остатки,\nнизкий остаток"];
+ sup->sys[label="накладная\n(новые товары)"]; sys->owner[label="аналитика продаж"]; sys->tax[label="отчётность\nо выручке"]; }

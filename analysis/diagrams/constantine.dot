@@ -1,0 +1,3 @@
+digraph G { graph[fontname="DejaVu Sans",label="Структурная карта Константайна (оформление заказа)",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=11,shape=box]; edge[fontname="DejaVu Sans",fontsize=10];
+ m[label="main\n(меню)",style=filled,fillcolor="#dbe9ff"]; a[label="add_to_cart"]; f[label="find_product"]; co[label="create_order"]; t[label="cart_total"]; so[label="save_orders"]; sp[label="save_products"]; po[label="print_order"];
+ m->a[label="○→ cart, id, size, qty\n●← ok, msg"]; a->f[label="○→ id\n○← product"]; m->co[label="○→ cart, client\n○← order"]; co->f; co->t[label="○→ cart\n○← total"]; m->so[label="○→ orders"]; m->sp[label="○→ products"]; m->po[label="○→ order"]; }

@@ -1,0 +1,4 @@
+digraph G { graph[fontname="DejaVu Sans",label="Структурная схема программного продукта",labelloc=t,fontsize=18]; node[fontname="DejaVu Sans",fontsize=12,shape=box,style=filled,fillcolor="#dbe9ff"];
+ main[label="main.py\nГлавное меню"]; cat[label="catalog.py\nКаталог"]; cart[label="cart.py\nКорзина"]; ord[label="orders.py\nЗаказы"]; an[label="analytics.py\nАналитика"]; st[label="storage.py\nХранилище"];
+ f1[shape=cylinder,fillcolor="#eeeeee",label="products.json"]; f2[shape=cylinder,fillcolor="#eeeeee",label="orders.json"];
+ main->{cat cart ord an st}; cart->cat; ord->cart; ord->cat; st->f1; ord->f2; }
