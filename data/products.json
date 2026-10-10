@@ -1,0 +1,10 @@
+[
+  {"id": 1, "name": "Air Zoom Pegasus 40", "brand": "Nike", "category": "Обувь", "price": 11990.0, "sizes": {"40": 4, "41": 3, "42": 2}},
+  {"id": 2, "name": "Ultraboost Light", "brand": "Adidas", "category": "Обувь", "price": 15490.0, "sizes": {"41": 1, "42": 1}},
+  {"id": 3, "name": "Gel-Kayano 30", "brand": "Asics", "category": "Обувь", "price": 13990.0, "sizes": {"39": 2, "40": 5, "43": 3}},
+  {"id": 4, "name": "Футболка Dri-FIT", "brand": "Nike", "category": "Одежда", "price": 2990.0, "sizes": {"S": 6, "M": 8, "L": 4}},
+  {"id": 5, "name": "Шорты беговые", "brand": "Puma", "category": "Одежда", "price": 2490.0, "sizes": {"M": 2, "L": 1}},
+  {"id": 6, "name": "Мяч футбольный Al Rihla", "brand": "Adidas", "category": "Инвентарь", "price": 3490.0, "sizes": {"5": 10}},
+  {"id": 7, "name": "Гантели 2x5 кг", "brand": "Torneo", "category": "Инвентарь", "price": 4590.0, "sizes": {"5": 3}},
+  {"id": 8, "name": "Коврик для йоги", "brand": "Demix", "category": "Инвентарь", "price": 1790.0, "sizes": {"183": 12}}
+]
